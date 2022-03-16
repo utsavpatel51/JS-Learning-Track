@@ -1,0 +1,53 @@
+@use "const";
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%; /* 1rem = 10px */
+}
+body {
+	font-family: "Poppins", sans-serif;
+	font-size: 1.6rem;
+	min-height: 100vh;
+	background-color: const.$background-color;
+}
+.container {
+	position: relative;
+	max-width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	grid-auto-rows: 25rem;
+
+	grid-gap: 0.8rem;
+	grid-auto-flow: dense;
+	margin: 2rem;
+
+	.project {
+		background-color: const.$container-background-color;
+		color: #ebebeb;
+		transition: all 0.8s;
+		&:hover {
+			background-color: const.$container-hover-background-color;
+		}
+		a {
+			height: 100%;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			text-decoration: none;
+			color: inherit;
+		}
+	}
+}
+.grid-column-span {
+	grid-column: span 2;
+}
+.grid-row-span {
+	grid-row: span 2;
+}
