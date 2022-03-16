@@ -1,0 +1,98 @@
+@use "const";
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: const.$font-family;
+	background-color: const.$background-color;
+	color: const.$foreground-color;
+}
+button,
+form,
+input {
+	font-family: inherit;
+}
+header {
+	min-height: 20vh;
+	border-bottom: 5px solid const.$foreground-color;
+	position: relative;
+	button {
+		position: absolute;
+		top: 1rem;
+		left: 1rem;
+		padding: 1rem 3rem;
+		border: none;
+		cursor: pointer;
+	}
+	h3 {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+	}
+	h1 {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: const.$h1;
+	}
+	.result {
+		height: 8rem;
+		width: 10rem;
+		background-color: const.$foreground-color;
+		color: const.$background-color;
+		font-size: const.$result-number;
+		text-align: center;
+		line-height: 2;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, 50%);
+	}
+}
+
+main {
+	min-height: 80vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		input[type="text"] {
+			width: 20rem;
+			background: none;
+			border: 0.4rem solid const.$foreground-color;
+			color: const.$foreground-color;
+			text-align: center;
+			display: block;
+			padding: 2rem 0;
+			margin: 2rem;
+			font-size: const.$result-number;
+		}
+		input[type="submit"] {
+			padding: 1rem 3rem;
+			border: none;
+			cursor: pointer;
+		}
+	}
+	.right {
+		p {
+			font-size: const.$h2;
+			margin-bottom: 5rem;
+			text-align: center;
+		}
+		h3 {
+			font-size: const.$h2;
+		}
+	}
+}
