@@ -8,6 +8,24 @@
 		<link rel="stylesheet" href="./css/style.css" />
 	</head>
 	<body>
+		<!-- Game Information Modal -->
+		<button class="game-info">
+			<img src="./img/iconmonstr-info-6.svg" />
+		</button>
+		<section class="game-info-box hidden">
+			<h1>Pig Game</h1>
+			<hr />
+			<br />
+			<p>
+				This is a game where you and your opponent take turns rolling a
+				die. The player who rolls a 1 loses all his current points.
+				Press hold button to hold your current points. The game ends
+				when one of the players has accumulated 50 points.
+			</p>
+			<button class="game-info__close">&times;</button>
+		</section>
+		<div class="overlay hidden"></div>
+		<!-- Main Section -->
 		<main>
 			<section class="player player--active" id="player--0">
 				<h2 class="name" id="name--0">PLAYER 1</h2>

@@ -151,3 +151,51 @@ main {
 	background-color: #ebebeb;
 	box-shadow: 0 1rem 2rem rgb(199, 54, 95, 0.2);
 }
+
+// Information Modal
+.game-info {
+	position: absolute;
+	top: 0.5rem;
+	right: 1rem;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+.game-info-box {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #333;
+	color: #ebebeb;
+	padding: 2rem;
+	border-radius: 1rem;
+	z-index: 10;
+	h1 {
+		font-size: 2.2rem;
+		color: const.$background-color;
+	}
+	p {
+		font-size: 1.2rem;
+		text-align: justify;
+	}
+	.game-info__close {
+		position: absolute;
+		top: 0.8rem;
+		right: 1rem;
+		background: none;
+		border: none;
+		color: #fff;
+		font-size: 1.8rem;
+		cursor: pointer;
+	}
+}
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 5;
+}

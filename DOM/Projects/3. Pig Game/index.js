@@ -99,3 +99,17 @@ holdBtn.addEventListener("click", function () {
 });
 
 newGameBtn.addEventListener("click", newGame);
+
+const gameInfo = document.querySelector(".game-info");
+
+gameInfo.addEventListener("click", function () {
+	document.querySelector(".game-info-box").classList.remove("hidden");
+	document.querySelector(".overlay").classList.remove("hidden");
+});
+
+const gameInfoClose = document.querySelector(".game-info__close");
+gameInfoClose.addEventListener("click", function () {
+	console.log("here");
+	document.querySelector(".game-info-box").classList.add("hidden");
+	document.querySelector(".overlay").classList.add("hidden");
+});
